@@ -1,0 +1,14 @@
+.btn {
+  padding: 20px;
+  text-decoration: none;
+  border-radius: 3%;
+
+  &-primary {
+    background: $primary-color;
+    color: $light-color;
+  }
+}
+
+.current {
+  border-bottom: 3px solid $primary-color;
+}

@@ -1,3 +1,14 @@
+.btn {
+  padding: 20px;
+  text-decoration: none;
+  border-radius: 3%; }
+  .btn-primary {
+    background: #00a6d8;
+    color: #f4f4f4; }
+
+.current {
+  border-bottom: 3px solid #00a6d8; }
+
 * {
   margin: 0;
   padding: 0;
@@ -11,7 +22,6 @@
   .container #home-header {
     height: 100vh;
     background: url("https://source.unsplash.com/random") no-repeat center center/cover;
-    padding: 1.2rem;
     z-index: -1; }
     .container #home-header:after {
       content: "";
@@ -20,128 +30,160 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: rgba(0, 0, 0, 0.692);
+      background-color: rgba(5, 5, 5, 0.87);
       z-index: 0; }
-    .container #home-header #homenav {
-      display: flex;
-      justify-content: space-between;
-      position: relative; }
-      .container #home-header #homenav .logo {
-        width: 50px;
-        height: 50px;
-        background-color: #333;
+    .container #home-header .navcontainer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 1.2rem; }
+      .container #home-header .navcontainer #homenav {
         display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center; }
-        .container #home-header #homenav .logo a {
-          text-decoration: none;
-          color: #f4f4f4; }
-      .container #home-header #homenav .menuwrap {
-        top: 0;
-        right: 0; }
-        .container #home-header #homenav .menuwrap .toggler {
-          position: absolute;
-          top: 0;
-          right: 0;
-          z-index: 2;
+        justify-content: space-between;
+        position: relative; }
+        .container #home-header .navcontainer #homenav .logo {
           width: 50px;
           height: 50px;
-          opacity: 0; }
-          .container #home-header #homenav .menuwrap .toggler:checked + .hamburgermenu {
-            display: flex;
+          background-color: #333;
+          display: flex;
+          border-radius: 5%;
+          justify-content: center;
+          align-items: center;
+          text-align: center; }
+          .container #home-header .navcontainer #homenav .logo a {
+            text-decoration: none;
+            color: #f4f4f4; }
+        .container #home-header .navcontainer #homenav .regularmenu {
+          display: none; }
+        @media only screen and (min-width: 768px) {
+          .container #home-header .navcontainer #homenav .regularmenu {
+            display: block; }
+            .container #home-header .navcontainer #homenav .regularmenu ul {
+              display: flex; }
+              .container #home-header .navcontainer #homenav .regularmenu ul li {
+                list-style: none;
+                padding: 1.2rem; }
+                .container #home-header .navcontainer #homenav .regularmenu ul li a {
+                  text-decoration: none;
+                  color: #f4f4f4;
+                  transition: 0.2s ease; }
+                  .container #home-header .navcontainer #homenav .regularmenu ul li a:hover {
+                    color: #333; }
+          .container #home-header .navcontainer #homenav .menuwrap {
+            display: none; } }
+        .container #home-header .navcontainer #homenav .menuwrap {
+          top: 0;
+          right: 0; }
+          .container #home-header .navcontainer #homenav .menuwrap .toggler {
             position: absolute;
             top: 0;
-            left: 0;
-            width: 100%;
-            height: 97vh;
-            overflow-x: hidden;
-            background-color: rgba(51, 51, 51, 0.658);
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            z-index: 1; }
-            .container #home-header #homenav .menuwrap .toggler:checked + .hamburgermenu .x-button {
+            right: 0;
+            z-index: 2;
+            width: 50px;
+            height: 50px;
+            opacity: 0; }
+            .container #home-header .navcontainer #homenav .menuwrap .toggler:hover {
+              cursor: pointer; }
+            .container #home-header .navcontainer #homenav .menuwrap .toggler:checked + .hamburgermenu {
+              display: flex;
               position: absolute;
               top: 0;
-              right: 0;
-              width: 50px;
-              height: 50px;
-              background: #333;
-              display: flex;
+              left: 0;
+              width: 100%;
+              height: 97vh;
+              overflow-x: hidden;
+              background-color: rgba(10, 10, 10, 0.979);
               justify-content: center;
-              align-items: center; }
-              .container #home-header #homenav .menuwrap .toggler:checked + .hamburgermenu .x-button .x-line {
-                width: 30px;
-                height: 2px;
-                background-color: #f4f4f4;
-                position: relative;
-                transform: rotateZ(-45deg); }
-                .container #home-header #homenav .menuwrap .toggler:checked + .hamburgermenu .x-button .x-line:before, .container #home-header #homenav .menuwrap .toggler:checked + .hamburgermenu .x-button .x-line:after {
-                  content: "";
+              align-items: center;
+              text-align: center;
+              z-index: 1;
+              transform: scale(1); }
+              .container #home-header .navcontainer #homenav .menuwrap .toggler:checked + .hamburgermenu .x-button {
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 50px;
+                height: 50px;
+                border-radius: 5%;
+                background: #333;
+                display: flex;
+                justify-content: center;
+                align-items: center; }
+                .container #home-header .navcontainer #homenav .menuwrap .toggler:checked + .hamburgermenu .x-button .x-line {
                   width: 30px;
                   height: 2px;
                   background-color: #f4f4f4;
-                  position: absolute;
-                  top: -10px;
-                  left: 0;
-                  transform: rotateZ(90deg);
-                  transform-origin: center; }
-                .container #home-header #homenav .menuwrap .toggler:checked + .hamburgermenu .x-button .x-line:after {
-                  top: 10px;
-                  transform: rotateZ(-90deg); }
-        .container #home-header #homenav .menuwrap .hamburger {
-          position: absolute;
-          top: 0;
-          right: 0;
-          width: 50px;
-          height: 50px;
-          background: #333;
-          display: flex;
-          justify-content: center;
-          align-items: center; }
-          .container #home-header #homenav .menuwrap .hamburger .line {
-            width: 30px;
-            height: 2px;
-            background-color: #f4f4f4;
-            position: relative; }
-            .container #home-header #homenav .menuwrap .hamburger .line:before, .container #home-header #homenav .menuwrap .hamburger .line:after {
-              content: "";
+                  position: relative;
+                  transform: rotateZ(-45deg); }
+                  .container #home-header .navcontainer #homenav .menuwrap .toggler:checked + .hamburgermenu .x-button .x-line:before, .container #home-header .navcontainer #homenav .menuwrap .toggler:checked + .hamburgermenu .x-button .x-line:after {
+                    content: "";
+                    width: 30px;
+                    height: 2px;
+                    background-color: #f4f4f4;
+                    position: absolute;
+                    top: -10px;
+                    left: 0;
+                    transform: rotateZ(90deg);
+                    transform-origin: center; }
+                  .container #home-header .navcontainer #homenav .menuwrap .toggler:checked + .hamburgermenu .x-button .x-line:after {
+                    top: 10px;
+                    transform: rotateZ(-90deg); }
+          .container #home-header .navcontainer #homenav .menuwrap .hamburger {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50px;
+            height: 50px;
+            background: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5%; }
+            .container #home-header .navcontainer #homenav .menuwrap .hamburger .line {
               width: 30px;
               height: 2px;
               background-color: #f4f4f4;
-              position: absolute;
-              top: -10px; }
-            .container #home-header #homenav .menuwrap .hamburger .line:after {
-              top: 10px; }
-        .container #home-header #homenav .menuwrap .hamburgermenu {
-          display: none; }
-          .container #home-header #homenav .menuwrap .hamburgermenu li {
-            list-style: none;
-            padding: 1.2rem; }
-          .container #home-header #homenav .menuwrap .hamburgermenu a {
-            text-decoration: none;
-            color: #f4f4f4;
-            font-size: 1.5rem; }
-            .container #home-header #homenav .menuwrap .hamburgermenu a:hover {
-              color: #333;
-              transition: 0.3s ease; }
-          .container #home-header #homenav .menuwrap .hamburgermenu .current {
-            border-bottom: 3px solid #00a6d8; }
+              position: relative; }
+              .container #home-header .navcontainer #homenav .menuwrap .hamburger .line:before, .container #home-header .navcontainer #homenav .menuwrap .hamburger .line:after {
+                content: "";
+                width: 30px;
+                height: 2px;
+                background-color: #f4f4f4;
+                position: absolute;
+                top: -10px; }
+              .container #home-header .navcontainer #homenav .menuwrap .hamburger .line:after {
+                top: 10px; }
+          .container #home-header .navcontainer #homenav .menuwrap .hamburgermenu {
+            transform: scale(0);
+            transition: 0.03s; }
+            .container #home-header .navcontainer #homenav .menuwrap .hamburgermenu li {
+              list-style: none;
+              padding: 1.2rem; }
+            .container #home-header .navcontainer #homenav .menuwrap .hamburgermenu a {
+              text-decoration: none;
+              color: #f4f4f4;
+              font-size: 1.5rem; }
+              .container #home-header .navcontainer #homenav .menuwrap .hamburgermenu a:hover {
+                color: #333;
+                transition: 0.3s ease; }
     .container #home-header div.headertext {
       position: relative;
       display: flex;
       flex-direction: column;
       font-size: 1.5rem;
-      height: 80%;
+      height: 100%;
       text-align: center;
       justify-content: center;
       align-items: center;
-      z-index: 1; }
+      z-index: 1;
+      padding: 1.2rem; }
       .container #home-header div.headertext h1 {
         font-size: 3rem;
-        color: #f4f4f4; }
+        color: #f4f4f4;
+        margin-bottom: 1.2rem; }
       .container #home-header div.headertext p {
-        color: #f4f4f4; }
+        color: #f4f4f4;
+        margin-bottom: 2rem; }
 
 /*# sourceMappingURL=main.css.map */

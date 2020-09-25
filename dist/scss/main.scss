@@ -1,4 +1,5 @@
 @import "variables";
+@import "utilities";
 
 * {
   margin: 0;
@@ -16,7 +17,7 @@
     height: 100vh;
     background: url("https://source.unsplash.com/random") no-repeat center
       center / cover;
-    padding: 1.2rem;
+
     z-index: -1;
 
     &:after {
@@ -26,150 +27,195 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: rgba(0, 0, 0, 0.692);
+      background-color: $shader;
       z-index: 0;
     }
+    .navcontainer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 1.2rem;
 
-    #homenav {
-      display: flex;
-      justify-content: space-between;
-      position: relative;
-
-      .logo {
-        width: 50px;
-        height: 50px;
-        background-color: $dark-color;
+      #homenav {
         display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
+        justify-content: space-between;
+        position: relative;
 
-        a {
-          text-decoration: none;
-          color: $light-color;
-        }
-      }
-
-      .menuwrap {
-        top: 0;
-        right: 0;
-
-        .toggler {
-          position: absolute;
-          top: 0;
-          right: 0;
-          z-index: 2;
+        .logo {
           width: 50px;
           height: 50px;
-          opacity: 0;
-
-          &:checked + .hamburgermenu {
-            display: flex;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 97vh;
-            overflow-x: hidden;
-            background-color: rgba(51, 51, 51, 0.658);
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            z-index: 1;
-
-            .x-button {
-              position: absolute;
-              top: 0;
-              right: 0;
-              width: 50px;
-              height: 50px;
-              background: $dark-color;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-
-              .x-line {
-                width: 30px;
-                height: 2px;
-                background-color: $light-color;
-                position: relative;
-                transform: rotateZ(-45deg);
-
-                &:before,
-                &:after {
-                  content: "";
-                  width: 30px;
-                  height: 2px;
-                  background-color: $light-color;
-                  position: absolute;
-                  top: -10px;
-                  left: 0;
-                  transform: rotateZ(90deg);
-                  transform-origin: center;
-                }
-
-                &:after {
-                  top: 10px;
-                  transform: rotateZ(-90deg);
-                }
-              }
-            }
-          }
-        }
-
-        .hamburger {
-          position: absolute;
-          top: 0;
-          right: 0;
-          width: 50px;
-          height: 50px;
-          background: $dark-color;
+          background-color: $dark-color;
           display: flex;
+          border-radius: 5%;
           justify-content: center;
           align-items: center;
-
-          .line {
-            width: 30px;
-            height: 2px;
-            background-color: $light-color;
-            position: relative;
-
-            &:before,
-            &:after {
-              content: "";
-              width: 30px;
-              height: 2px;
-              background-color: $light-color;
-              position: absolute;
-              top: -10px;
-            }
-
-            &:after {
-              top: 10px;
-            }
-          }
-        }
-
-        .hamburgermenu {
-          display: none;
-
-          li {
-            list-style: none;
-            padding: 1.2rem;
-          }
+          text-align: center;
 
           a {
             text-decoration: none;
             color: $light-color;
-            font-size: 1.5rem;
+          }
+        }
 
-            &:hover {
-              color: $dark-color;
-              transition: 0.3s ease;
+        .regularmenu {
+          display: none;
+        }
+
+        @media only screen and (min-width: $breakpoint-tablet) {
+          .regularmenu {
+            display: block;
+
+            ul {
+              display: flex;
+
+              li {
+                list-style: none;
+                padding: 1.2rem;
+
+                a {
+                  text-decoration: none;
+                  color: $light-color;
+                  transition: 0.2s ease;
+
+                  &:hover {
+                    color: $dark-color;
+                  }
+                }
+              }
             }
           }
-          .current {
-            border-bottom: 3px solid $primary-color;
+          .menuwrap {
+            display: none;
+          }
+        }
+
+        .menuwrap {
+          top: 0;
+          right: 0;
+
+          .toggler {
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 2;
+            width: 50px;
+            height: 50px;
+            opacity: 0;
+
+            &:hover {
+              cursor: pointer;
+            }
+
+            &:checked + .hamburgermenu {
+              display: flex;
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 97vh;
+              overflow-x: hidden;
+              background-color: $menu-overlay;
+              justify-content: center;
+              align-items: center;
+              text-align: center;
+              z-index: 1;
+              transform: scale(1);
+
+              .x-button {
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 50px;
+                height: 50px;
+                border-radius: 5%;
+                background: $dark-color;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .x-line {
+                  width: 30px;
+                  height: 2px;
+                  background-color: $light-color;
+                  position: relative;
+                  transform: rotateZ(-45deg);
+
+                  &:before,
+                  &:after {
+                    content: "";
+                    width: 30px;
+                    height: 2px;
+                    background-color: $light-color;
+                    position: absolute;
+                    top: -10px;
+                    left: 0;
+                    transform: rotateZ(90deg);
+                    transform-origin: center;
+                  }
+
+                  &:after {
+                    top: 10px;
+                    transform: rotateZ(-90deg);
+                  }
+                }
+              }
+            }
+          }
+
+          .hamburger {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50px;
+            height: 50px;
+            background: $dark-color;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5%;
+
+            .line {
+              width: 30px;
+              height: 2px;
+              background-color: $light-color;
+              position: relative;
+
+              &:before,
+              &:after {
+                content: "";
+                width: 30px;
+                height: 2px;
+                background-color: $light-color;
+                position: absolute;
+                top: -10px;
+              }
+
+              &:after {
+                top: 10px;
+              }
+            }
+          }
+
+          .hamburgermenu {
+            transform: scale(0);
+            transition: 0.03s;
+
+            li {
+              list-style: none;
+              padding: 1.2rem;
+            }
+
+            a {
+              text-decoration: none;
+              color: $light-color;
+              font-size: 1.5rem;
+
+              &:hover {
+                color: $dark-color;
+                transition: 0.3s ease;
+              }
+            }
           }
         }
       }
@@ -180,19 +226,22 @@
       display: flex;
       flex-direction: column;
       font-size: 1.5rem;
-      height: 80%;
+      height: 100%;
       text-align: center;
       justify-content: center;
       align-items: center;
       z-index: 1;
+      padding: 1.2rem;
 
       h1 {
         font-size: 3rem;
         color: $light-color;
+        margin-bottom: 1.2rem;
       }
 
       p {
         color: $light-color;
+        margin-bottom: 2rem;
       }
     }
   }
