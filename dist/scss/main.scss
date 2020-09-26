@@ -17,7 +17,6 @@
     height: 100vh;
     background: url("https://source.unsplash.com/random") no-repeat center
       center / cover;
-
     z-index: -1;
 
     &:after {
@@ -41,19 +40,19 @@
         display: flex;
         justify-content: space-between;
         position: relative;
-
         .logo {
-          width: 50px;
-          height: 50px;
-          background-color: $dark-color;
           display: flex;
-          border-radius: 5%;
           justify-content: center;
           align-items: center;
-          text-align: center;
+          width: 50px;
+          height: 50px;
+          background: $dark-color;
+          text-decoration: none;
+          color: $light-color;
+          transition: 0.2s ease;
 
-          a {
-            text-decoration: none;
+          &:hover {
+            background: $primary-color;
             color: $light-color;
           }
         }
@@ -79,7 +78,7 @@
                   transition: 0.2s ease;
 
                   &:hover {
-                    color: $dark-color;
+                    color: $secondary-color;
                   }
                 }
               }
@@ -102,6 +101,7 @@
             width: 50px;
             height: 50px;
             opacity: 0;
+            transition: 0.2s ease;
 
             &:hover {
               cursor: pointer;
@@ -121,6 +121,7 @@
               text-align: center;
               z-index: 1;
               transform: scale(1);
+              transition: 0.2s ease;
 
               .x-button {
                 position: absolute;
@@ -199,7 +200,11 @@
 
           .hamburgermenu {
             transform: scale(0);
-            transition: 0.03s;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 97vh;
 
             li {
               list-style: none;
@@ -212,7 +217,7 @@
               font-size: 1.5rem;
 
               &:hover {
-                color: $dark-color;
+                color: $secondary-color;
                 transition: 0.3s ease;
               }
             }

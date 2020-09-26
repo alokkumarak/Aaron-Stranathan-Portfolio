@@ -6,6 +6,12 @@
   &-primary {
     background: $primary-color;
     color: $light-color;
+    transition: 0.2s ease;
+
+    &:hover {
+      background: $secondary-color;
+      color: $dark-color;
+    }
   }
 }
 
