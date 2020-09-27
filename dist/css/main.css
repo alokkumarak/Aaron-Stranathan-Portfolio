@@ -3,15 +3,24 @@
   text-decoration: none;
   border-radius: 3%; }
   .btn-primary {
-    background: #009dff;
-    color: #f1faee;
+    background: #004875;
+    color: #fdfdeb;
     transition: 0.2s ease; }
     .btn-primary:hover {
-      background: #00fcb0;
+      background: #00ffb3;
       color: #202020; }
 
 .fullscreen {
   height: 100vh; }
+
+.section-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 2rem; }
+
+section {
+  padding: 0 2rem 2rem 2rem; }
 
 * {
   margin: 0;
@@ -22,7 +31,7 @@
   z-index: 1; }
 
 .container {
-  background: #f1faee; }
+  background: #fdfdeb; }
   .container #home-header {
     background: url("../images/header.jpeg") no-repeat center center/cover;
     z-index: -1; }
@@ -55,11 +64,11 @@
           background: #202020;
           border-radius: 5%;
           text-decoration: none;
-          color: #f1faee;
+          color: #fdfdeb;
           transition: 0.2s ease; }
           .container #home-header .navcontainer #homenav .logo:hover {
-            background: #009dff;
-            color: #f1faee; }
+            background: #004875;
+            color: #fdfdeb; }
         .container #home-header .navcontainer #homenav .regularmenu {
           display: none; }
         @media only screen and (min-width: 768px) {
@@ -74,17 +83,17 @@
                 padding: 1.2rem; }
                 .container #home-header .navcontainer #homenav .regularmenu ul li a {
                   text-decoration: none;
-                  color: #f1faee;
+                  color: #fdfdeb;
                   transition: 0.2s ease; }
                   .container #home-header .navcontainer #homenav .regularmenu ul li a:hover {
-                    color: #00fcb0; }
+                    color: #00ffb3; }
           .container #home-header .navcontainer #homenav .menuwrap {
             display: none; } }
         .container #home-header .navcontainer #homenav .menuwrap {
           top: 0;
           right: 0; }
           .container #home-header .navcontainer #homenav .menuwrap:hover .hamburger {
-            background: #009dff; }
+            background: #004875; }
           .container #home-header .navcontainer #homenav .menuwrap .toggler {
             position: absolute;
             top: 0;
@@ -109,13 +118,13 @@
               justify-content: flex-end;
               align-items: center;
               text-align: center;
-              z-index: 1;
-              transition: 0.2s ease; }
+              z-index: 1; }
               .container #home-header .navcontainer #homenav .menuwrap .toggler:checked + .hamburgermenu a {
                 display: initial; }
                 .container #home-header .navcontainer #homenav .menuwrap .toggler:checked + .hamburgermenu a i {
                   height: 50px;
-                  width: 50px; }
+                  width: 50px;
+                  position: relative; }
               .container #home-header .navcontainer #homenav .menuwrap .toggler:checked + .hamburgermenu .x-button {
                 position: absolute;
                 top: 0;
@@ -126,18 +135,19 @@
                 background: #202020;
                 display: flex;
                 justify-content: center;
-                align-items: center; }
+                align-items: center;
+                z-index: 2; }
                 .container #home-header .navcontainer #homenav .menuwrap .toggler:checked + .hamburgermenu .x-button .x-line {
                   width: 30px;
                   height: 2px;
-                  background-color: #f1faee;
+                  background-color: #fdfdeb;
                   position: relative;
                   transform: rotateZ(-45deg); }
                   .container #home-header .navcontainer #homenav .menuwrap .toggler:checked + .hamburgermenu .x-button .x-line:before, .container #home-header .navcontainer #homenav .menuwrap .toggler:checked + .hamburgermenu .x-button .x-line:after {
                     content: "";
                     width: 30px;
                     height: 2px;
-                    background-color: #f1faee;
+                    background-color: #fdfdeb;
                     position: absolute;
                     top: -10px;
                     left: 0;
@@ -161,27 +171,29 @@
             .container #home-header .navcontainer #homenav .menuwrap .hamburger .line {
               width: 30px;
               height: 2px;
-              background-color: #f1faee;
+              background-color: #fdfdeb;
               position: relative; }
               .container #home-header .navcontainer #homenav .menuwrap .hamburger .line:before, .container #home-header .navcontainer #homenav .menuwrap .hamburger .line:after {
                 content: "";
                 width: 30px;
                 height: 2px;
-                background-color: #f1faee;
+                background-color: #fdfdeb;
                 position: absolute;
                 top: -10px; }
               .container #home-header .navcontainer #homenav .menuwrap .hamburger .line:after {
                 top: 10px; }
           .container #home-header .navcontainer #homenav .menuwrap .hamburgermenu {
-            height: 0;
-            position: absolute; }
+            height: 50px;
+            position: absolute;
+            transition: 0.3s ease-in-out;
+            transition: height 0.3s ease; }
             .container #home-header .navcontainer #homenav .menuwrap .hamburgermenu a {
               text-decoration: none;
-              color: #f1faee;
+              color: #fdfdeb;
               font-size: 1.5rem;
               display: none; }
               .container #home-header .navcontainer #homenav .menuwrap .hamburgermenu a:hover {
-                color: #00fcb0;
+                color: #00ffb3;
                 transition: 0.3s ease; }
     .container #home-header div.headertext {
       position: relative;
@@ -196,26 +208,22 @@
       padding: 0 70px 0 70px; }
       .container #home-header div.headertext h1 {
         font-size: 3rem;
-        color: #f1faee;
-        margin-bottom: 1.2rem; }
+        color: #fdfdeb;
+        margin-bottom: 2rem; }
       .container #home-header div.headertext p {
-        color: #f1faee;
+        color: #fdfdeb;
         margin-bottom: 2rem; }
   .container #work {
-    padding: 0 80px 0 80px;
-    background: #009dff;
-    color: #f1faee; }
-    .container #work .work-header {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 10rem; }
+    background: #004875;
+    color: #fdfdeb; }
     .container #work .grid-system {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-      gap: 2rem; }
+      grid-template-columns: repeat(auto-fit, minmax(350px, 500px));
+      gap: 2rem;
+      justify-content: center;
+      align-items: center; }
       .container #work .grid-system .grid-item {
-        background: #00fcb0;
+        background: #00ffb3;
         text-align: center;
         padding: 1.2rem;
         border-radius: 1%;
@@ -228,5 +236,20 @@
             cursor: pointer; }
         .container #work .grid-system .grid-item h3 {
           padding: 1.2rem; }
+  .container #about {
+    background: #202020;
+    color: #fdfdeb; }
+    .container #about p {
+      font-size: 1.5rem;
+      line-height: 4rem; }
+    .container #about .gridsystem-about {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 3rem;
+      text-align: center; }
+      .container #about .gridsystem-about h3 {
+        grid: none; }
+      .container #about .gridsystem-about i {
+        font-size: 6rem; }
 
 /*# sourceMappingURL=main.css.map */

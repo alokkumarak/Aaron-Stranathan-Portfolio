@@ -18,3 +18,14 @@
 .fullscreen {
   height: 100vh;
 }
+
+.section-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 2rem;
+}
+
+section {
+  padding: 0 2rem 2rem 2rem;
+}

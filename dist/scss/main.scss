@@ -129,13 +129,13 @@
               align-items: center;
               text-align: center;
               z-index: 1;
-              transition: 0.2s ease;
 
               a {
                 display: initial;
                 i {
                   height: 50px;
                   width: 50px;
+                  position: relative;
                 }
               }
 
@@ -150,6 +150,7 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                z-index: 2;
 
                 .x-line {
                   width: 30px;
@@ -216,9 +217,10 @@
           }
 
           .hamburgermenu {
-            height: 0;
+            height: 50px;
             position: absolute;
-
+            transition: 0.3s ease-in-out;
+            transition: height 0.3s ease;
             a {
               text-decoration: none;
               color: $light-color;
@@ -250,7 +252,7 @@
       h1 {
         font-size: 3rem;
         color: $light-color;
-        margin-bottom: 1.2rem;
+        margin-bottom: 2rem;
       }
 
       p {
@@ -261,21 +263,15 @@
   }
 
   #work {
-    padding: 0 80px 0 80px;
     background: $primary-color;
     color: $light-color;
 
-    .work-header {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 10rem;
-    }
-
     .grid-system {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(350px, 500px));
       gap: 2rem;
+      justify-content: center;
+      align-items: center;
 
       .grid-item {
         background: $secondary-color;
@@ -297,6 +293,36 @@
         h3 {
           padding: 1.2rem;
         }
+      }
+    }
+  }
+
+  #about {
+    background: $dark-color;
+    color: $light-color;
+
+    p {
+      font-size: 1.5rem;
+      line-height: 4rem;
+    }
+
+    .gridsystem-about {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 3rem;
+      text-align: center;
+
+      h3 {
+        grid: none;
+      }
+
+      i {
+        font-size: 6rem;
+      }
+    }
+    @media only screen and (max-width: 768px) {
+      img {
+        width: 100%;
       }
     }
   }
