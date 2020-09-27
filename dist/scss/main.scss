@@ -14,9 +14,7 @@
   background: $light-color;
 
   #home-header {
-    height: 100vh;
-    background: url("https://source.unsplash.com/random") no-repeat center
-      center / cover;
+    background: url("../images/header.jpeg") no-repeat center center / cover;
     z-index: -1;
 
     &:after {
@@ -30,11 +28,12 @@
       z-index: 0;
     }
     .navcontainer {
-      position: absolute;
+      position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       padding: 1.2rem;
+      z-index: 5;
 
       #homenav {
         display: flex;
@@ -47,6 +46,7 @@
           width: 50px;
           height: 50px;
           background: $dark-color;
+          border-radius: 5% 5% 50% 5%;
           text-decoration: none;
           color: $light-color;
           transition: 0.2s ease;
@@ -64,6 +64,8 @@
         @media only screen and (min-width: $breakpoint-tablet) {
           .regularmenu {
             display: block;
+            background: $shader;
+            border-radius: 5%;
 
             ul {
               display: flex;
@@ -92,6 +94,12 @@
         .menuwrap {
           top: 0;
           right: 0;
+
+          &:hover {
+            .hamburger {
+              background: $primary-color;
+            }
+          }
 
           .toggler {
             position: absolute;
@@ -129,7 +137,7 @@
                 right: 0;
                 width: 50px;
                 height: 50px;
-                border-radius: 5%;
+                border-radius: 5% 5% 5% 50%;
                 background: $dark-color;
                 display: flex;
                 justify-content: center;
@@ -174,7 +182,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            border-radius: 5%;
+            border-radius: 5% 5% 5% 50%;
+            transition: 0.2s ease;
 
             .line {
               width: 30px;
@@ -194,6 +203,8 @@
 
               &:after {
                 top: 10px;
+                width: 25px;
+                margin-left: 5px;
               }
             }
           }
@@ -236,7 +247,7 @@
       justify-content: center;
       align-items: center;
       z-index: 1;
-      padding: 1.2rem;
+      padding: 0 70px 0 70px;
 
       h1 {
         font-size: 3rem;
@@ -247,6 +258,47 @@
       p {
         color: $light-color;
         margin-bottom: 2rem;
+      }
+    }
+  }
+
+  #work {
+    padding: 0 80px 0 80px;
+    background: $primary-color;
+    color: $light-color;
+
+    .work-header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 10rem;
+    }
+
+    .grid-system {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+
+      .grid-item {
+        background: $secondary-color;
+        text-align: center;
+        padding: 1.2rem;
+        border-radius: 1%;
+        color: $dark-color;
+
+        img {
+          transform: scale(1);
+          transition: 0.2s ease;
+
+          &:hover {
+            transform: scale(1.01);
+            cursor: pointer;
+          }
+        }
+
+        h3 {
+          padding: 1.2rem;
+        }
       }
     }
   }
