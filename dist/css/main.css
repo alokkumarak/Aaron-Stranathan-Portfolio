@@ -251,5 +251,8 @@ section {
         grid: none; }
       .container #about .gridsystem-about i {
         font-size: 6rem; }
+    @media only screen and (max-width: 768px) {
+      .container #about img {
+        width: 100%; } }
 
 /*# sourceMappingURL=main.css.map */
