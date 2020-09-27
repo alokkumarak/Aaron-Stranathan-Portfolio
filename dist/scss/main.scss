@@ -46,7 +46,7 @@
           width: 50px;
           height: 50px;
           background: $dark-color;
-          border-radius: 5% 5% 50% 5%;
+          border-radius: 5%;
           text-decoration: none;
           color: $light-color;
           transition: 0.2s ease;
@@ -117,19 +117,27 @@
 
             &:checked + .hamburgermenu {
               display: flex;
+              flex-direction: column;
               position: absolute;
               top: 0;
-              left: 0;
-              width: 100%;
-              height: 97vh;
-              overflow-x: hidden;
+              right: 0;
+              width: 50px;
+              height: 275px;
+              overflow: hidden;
               background-color: $menu-overlay;
-              justify-content: center;
+              justify-content: flex-end;
               align-items: center;
               text-align: center;
               z-index: 1;
-              transform: scale(1);
               transition: 0.2s ease;
+
+              a {
+                display: initial;
+                i {
+                  height: 50px;
+                  width: 50px;
+                }
+              }
 
               .x-button {
                 position: absolute;
@@ -137,7 +145,7 @@
                 right: 0;
                 width: 50px;
                 height: 50px;
-                border-radius: 5% 5% 5% 50%;
+                border-radius: 5%;
                 background: $dark-color;
                 display: flex;
                 justify-content: center;
@@ -182,7 +190,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            border-radius: 5% 5% 5% 50%;
+            border-radius: 5%;
             transition: 0.2s ease;
 
             .line {
@@ -203,29 +211,19 @@
 
               &:after {
                 top: 10px;
-                width: 25px;
-                margin-left: 5px;
               }
             }
           }
 
           .hamburgermenu {
-            transform: scale(0);
+            height: 0;
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 97vh;
-
-            li {
-              list-style: none;
-              padding: 1.2rem;
-            }
 
             a {
               text-decoration: none;
               color: $light-color;
               font-size: 1.5rem;
+              display: none;
 
               &:hover {
                 color: $secondary-color;
