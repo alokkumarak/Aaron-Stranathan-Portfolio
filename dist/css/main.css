@@ -270,7 +270,7 @@ section {
           display: flex;
           gap: 1.5rem;
           padding: 1rem 0;
-          justify-content: space-around;
+          justify-content: center;
           text-align: center; }
           .container #contact .form-container .flexsystem-contact .contactform .formitem {
             display: flex;
@@ -299,6 +299,8 @@ section {
       .container #contact .contactform {
         flex-direction: column; }
         .container #contact .contactform input {
-          width: 100%; } }
+          width: 100%; }
+        .container #contact .contactform .send {
+          margin: auto; } }
 
 /*# sourceMappingURL=main.css.map */
