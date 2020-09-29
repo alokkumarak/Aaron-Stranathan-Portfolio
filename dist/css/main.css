@@ -40,7 +40,7 @@ section {
       top: 0;
       left: 0;
       width: 100%;
-      height: 100%;
+      height: 100vh;
       background-color: rgba(15, 15, 15, 0.788);
       z-index: 0; }
     .container #home-header .navcontainer {
@@ -190,7 +190,7 @@ section {
               .container #home-header .navcontainer #homenav .menuwrap .hamburgermenu a:hover {
                 color: #00ffb3;
                 transition: 0.3s ease; }
-    .container #home-header div.headertext {
+    .container #home-header .headertext {
       position: relative;
       display: flex;
       flex-direction: column;
@@ -201,13 +201,16 @@ section {
       align-items: center;
       z-index: 1;
       padding: 0 2rem 0 2rem; }
-      .container #home-header div.headertext h1 {
+      .container #home-header .headertext h1 {
         font-size: 3rem;
         color: #fdfdeb;
         margin-bottom: 2rem; }
-      .container #home-header div.headertext p {
+      .container #home-header .headertext p {
         color: #fdfdeb;
         margin-bottom: 2rem; }
+    @media only screen and (max-width: 768px) {
+      .container #home-header .headertext h1 {
+        font-size: 2rem; } }
   .container #work {
     background: #004875;
     color: #fdfdeb; }
@@ -238,9 +241,9 @@ section {
     flex-direction: column; }
     .container #about p {
       font-size: 1.5rem;
-      line-height: 4rem; }
+      line-height: 4rem;
+      text-align: center; }
       .container #about p img {
-        min-width: 400px;
         max-width: 400px; }
     .container #about .gridsystem-about {
       display: grid;
@@ -256,7 +259,12 @@ section {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center; } }
+        align-items: center;
+        font-size: 1.5rem;
+        line-height: 2.5rem; }
+        .container #about p img {
+          width: 320px;
+          padding: 2rem; } }
   .container #contact {
     background: #004875;
     color: #fdfdeb; }
