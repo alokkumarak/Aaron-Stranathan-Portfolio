@@ -45,7 +45,6 @@
           width: 50px;
           height: 50px;
           background: $dark-color;
-          border-radius: 5%;
           text-decoration: none;
           color: $light-color;
           transition: 0.2s ease;
@@ -64,7 +63,6 @@
           .regularmenu {
             display: block;
             background: $shader;
-            border-radius: 5%;
 
             ul {
               display: flex;
@@ -144,7 +142,6 @@
                 right: 0;
                 width: 50px;
                 height: 50px;
-                border-radius: 5%;
                 background: $dark-color;
                 display: flex;
                 justify-content: center;
@@ -190,7 +187,6 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            border-radius: 5%;
             transition: 0.2s ease;
 
             .line {
@@ -267,7 +263,7 @@
 
     .grid-system {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200pxx, 500px));
+      grid-template-columns: repeat(auto-fit, minmax(200px, 500px));
       gap: 2rem;
       justify-content: center;
       align-items: center;
@@ -299,10 +295,17 @@
   #about {
     background: $dark-color;
     color: $light-color;
+    display: flex;
+    flex-direction: column;
 
     p {
       font-size: 1.5rem;
       line-height: 4rem;
+
+      img {
+        min-width: 400px;
+        max-width: 400px;
+      }
     }
 
     .gridsystem-about {
@@ -320,8 +323,11 @@
       }
     }
     @media only screen and (max-width: 768px) {
-      img {
-        width: 100%;
+      p {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
       }
     }
   }

@@ -1,7 +1,6 @@
 .btn {
   padding: 20px;
-  text-decoration: none;
-  border-radius: 3%; }
+  text-decoration: none; }
   .btn-primary {
     background: #004875;
     color: #fdfdeb;
@@ -62,7 +61,6 @@ section {
           width: 50px;
           height: 50px;
           background: #202020;
-          border-radius: 5%;
           text-decoration: none;
           color: #fdfdeb;
           transition: 0.2s ease; }
@@ -74,8 +72,7 @@ section {
         @media only screen and (min-width: 768px) {
           .container #home-header .navcontainer #homenav .regularmenu {
             display: block;
-            background: rgba(15, 15, 15, 0.788);
-            border-radius: 5%; }
+            background: rgba(15, 15, 15, 0.788); }
             .container #home-header .navcontainer #homenav .regularmenu ul {
               display: flex; }
               .container #home-header .navcontainer #homenav .regularmenu ul li {
@@ -131,7 +128,6 @@ section {
                 right: 0;
                 width: 50px;
                 height: 50px;
-                border-radius: 5%;
                 background: #202020;
                 display: flex;
                 justify-content: center;
@@ -166,7 +162,6 @@ section {
             display: flex;
             justify-content: center;
             align-items: center;
-            border-radius: 5%;
             transition: 0.2s ease; }
             .container #home-header .navcontainer #homenav .menuwrap .hamburger .line {
               width: 30px;
@@ -218,7 +213,7 @@ section {
     color: #fdfdeb; }
     .container #work .grid-system {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200pxx, 500px));
+      grid-template-columns: repeat(auto-fit, minmax(200px, 500px));
       gap: 2rem;
       justify-content: center;
       align-items: center; }
@@ -238,10 +233,15 @@ section {
           padding: 1.2rem; }
   .container #about {
     background: #202020;
-    color: #fdfdeb; }
+    color: #fdfdeb;
+    display: flex;
+    flex-direction: column; }
     .container #about p {
       font-size: 1.5rem;
       line-height: 4rem; }
+      .container #about p img {
+        min-width: 400px;
+        max-width: 400px; }
     .container #about .gridsystem-about {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -252,8 +252,11 @@ section {
       .container #about .gridsystem-about i {
         font-size: 6rem; }
     @media only screen and (max-width: 768px) {
-      .container #about img {
-        width: 100%; } }
+      .container #about p {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; } }
   .container #contact {
     background: #004875;
     color: #fdfdeb; }
