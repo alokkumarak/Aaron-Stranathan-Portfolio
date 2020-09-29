@@ -28,8 +28,7 @@ section {
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  font-family: Arial, Helvetica, sans-serif;
-  z-index: 1; }
+  font-family: Arial, Helvetica, sans-serif; }
 
 .container {
   background: #fdfdeb; }
@@ -206,7 +205,7 @@ section {
       justify-content: center;
       align-items: center;
       z-index: 1;
-      padding: 0 70px 0 70px; }
+      padding: 0 2rem 0 2rem; }
       .container #home-header div.headertext h1 {
         font-size: 3rem;
         color: #fdfdeb;
@@ -219,7 +218,7 @@ section {
     color: #fdfdeb; }
     .container #work .grid-system {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 500px));
+      grid-template-columns: repeat(auto-fit, minmax(200pxx, 500px));
       gap: 2rem;
       justify-content: center;
       align-items: center; }
@@ -281,7 +280,7 @@ section {
               outline: none;
               padding: 0.5rem; }
             .container #contact .form-container .flexsystem-contact .contactform .formitem textarea {
-              width: 500px;
+              max-width: 500px;
               outline: none;
               border: none;
               padding: 0.5rem; }

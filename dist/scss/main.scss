@@ -7,7 +7,6 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
   font-family: Arial, Helvetica, sans-serif;
-  z-index: 1;
 }
 
 .container {
@@ -247,7 +246,7 @@
       justify-content: center;
       align-items: center;
       z-index: 1;
-      padding: 0 70px 0 70px;
+      padding: 0 2rem 0 2rem;
 
       h1 {
         font-size: 3rem;
@@ -268,7 +267,7 @@
 
     .grid-system {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 500px));
+      grid-template-columns: repeat(auto-fit, minmax(200pxx, 500px));
       gap: 2rem;
       justify-content: center;
       align-items: center;
@@ -358,7 +357,7 @@
               padding: 0.5rem;
             }
             textarea {
-              width: 500px;
+              max-width: 500px;
               outline: none;
               border: none;
               padding: 0.5rem;
