@@ -16,19 +16,26 @@
       name="keywords"
       content="front-end, web developer, responsive design, user experience, Aaron Stranathan, high quality websites"
     />
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
       integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
       crossorigin="anonymous"
-    />
+    /> -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+<!-- <link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+/>
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
     <link rel="stylesheet" href="css/main.css" />
     <title>Aaron Stranathan | Front-End Web Developer</title>
   </head>
   <body>
     <div class="container">
       <header id="home-header" class="fullscreen">
-        <div class="headertext">
+        <div class="headertext" data-aos="zoom-in" data-aos-duration="1500">
           <h1>Hi I'm Aaron, a Front-End Web Developer</h1>
           <p>
             I create high quality websites that are centered around
@@ -73,7 +80,7 @@
           <div class="section-header">
             <h3>Here Are Some of My Projects.</h3>
           </div>
-          <div class="grid-system">
+          <div class="grid-system" data-aos="flip-left" data-aos-duration="1500">
             <div class="grid-item grid-item1">
               <h3>Hampton Energy Ambassador Website</h3>
               <a href="https://yoursolarlife.com"
@@ -88,7 +95,7 @@
             <img
               style="float: right; margin: 0 1.2rem"
               src="images/aboutpic.png"
-              alt=""
+              alt="" data-aos="fade-up-left" data-aos-duration="1500"
             />
             My name is Aaron Stranathan, and I am a 23 year old web developer
             who is passionate about constant learning and growth. My interest in
@@ -115,30 +122,30 @@
             <i class="fab fa-github"></i>
           </div>
         </section>
-        <section id="contact">
+        <section id="contact" >
           <h3 class="section-header">Send Me An Email!</h3>
           <div class="form-container">
-            <form action="" class="flexsystem-contact" netlify>
+            <form action="" class="flexsystem-contact" netlify data-aos="zoom-in-down" data-aos-duration="1500">
               <div class="contactform">
                 <div class="formitem">
                   <label for="fname">First Name</label><br />
-                  <input type="text" name="fname" id="fname" />
+                  <input type="text" name="fname" id="fname" placeholder="Enter your First Namee....."/>
                 </div>
                 <div class="formitem">
                   <label for="fname">Last Name</label><br />
-                  <input type="text" name="lname" id="lname" />
+                  <input type="text" name="lname" id="lname" placeholder="Enter your last Namee....."/>
                 </div>
               </div>
               <div class="contactform">
                 <div class="formitem">
                   <label for="fname">Email</label><br />
-                  <input type="email" name="email" id="email" />
+                  <input type="email" name="email" id="email" placeholder="your Email....."/>
                 </div>
               </div>
               <div class="contactform">
                 <div class="formitem">
                   <label for="message">Message</label><br />
-                  <textarea name="message" id="" cols="30" rows="10"></textarea>
+                  <textarea name="message" id="" cols="30" rows="10" placeholder="Please Type a massage for me....."></textarea>
                 </div>
               </div>
               <div class="contactform">
@@ -151,5 +158,11 @@
         </section>
       </main>
     </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+
   </body>
 </html>
