@@ -1,13 +1,22 @@
 .btn {
   padding: 20px;
-  text-decoration: none; }
+  text-decoration: none;
+   border-radius: 15px 15px;
+}
+.btn:hover{
+  width:200px;
+  height:70px;
+}
   .btn-primary {
-    background: #004875;
+    background: #2595db;
     color: #fdfdeb;
-    transition: 0.2s ease; }
+    transition: 0.2s ease;
+   }
     .btn-primary:hover {
-      background: #00ffb3;
-      color: #202020; }
+      background: #06eea8;
+      color: #db1313;
+      
+     }
 
 .fullscreen {
   height: 100vh; }
